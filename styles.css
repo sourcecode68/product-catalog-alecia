@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* //navigation bar styles */
+
+.home{
+     background-image: linear-gradient(rgb(0, 0, 0), rgb(61, 61, 59));
+    background-color: #282727;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+   
+   
+}
+.nav-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.links{
+    opacity: 0.8;
+    text-decoration: none;
+    color: rgb(227, 223, 223);
+}
