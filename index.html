@@ -12,7 +12,7 @@
         <nav class="home">
             <ul class="nav-list">
                 <li><a href="index.html" class="links">Home</a></li>
-                <li><a href="about.html" class="links">About</a></li>
+              
                 <li><a href="products.html" class="links">Products</a></li>
                 <li><a href="contact.html" class="links">Contact</a></li>
             </ul>
@@ -27,12 +27,16 @@
 
    <section aria-label="Product Highlights">
   <div class="slideshow">
-    <figure>
-      <img src="product1.jpg" alt="Red running shoes with white soles" loading="lazy">
+    <figure class="slide active">
+       
+      <img src="https://images.unsplash.com/photo-1701014159143-09482059f571?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Red running shoes with white soles" loading="lazy">
       <figcaption>New Arrival - Red Running Shoes</figcaption>
     </figure>
-    <figure>
-      <img src="product2.jpg" alt="Blue backpack with padded straps" loading="lazy">
+
+
+
+    <figure class="slide">
+      <img src="https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blue backpack with padded straps" loading="lazy">
       <figcaption>Durable Backpack for Everyday Use</figcaption>
     </figure>
   </div>
@@ -70,4 +74,17 @@
 
     
 </body>
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide() {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  slides[slideIndex].classList.add("active");
+  slideIndex = (slideIndex + 1) % slides.length;
+}
+
+showSlide(); // first slide
+setInterval(showSlide, 4000); // change every 3 seconds
+</script>
 </html>
