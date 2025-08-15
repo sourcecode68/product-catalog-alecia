@@ -20,7 +20,7 @@ function startSlideshow() {
 }
 
 // nav click
-navButtons.forEach(button => {
+navButtons.forEach((button) => {
   button.addEventListener("click", () => {
     clearInterval(intervalId);
     showSlide(Number(button.dataset.slide));
@@ -29,3 +29,26 @@ navButtons.forEach(button => {
 });
 
 startSlideshow();
+// stop button
+let started=1;
+
+const startButton = document.querySelector(".stop");
+startButton.addEventListener("click", () => {
+  if(started==1)
+  {
+    started=0;
+    clearInterval(intervalId);
+    showSlide(currentIndex);
+
+  }
+  else if(started==0)
+  {
+  started=1;
+  currentIndex=(currentIndex+1)% slides.length;
+  showSlide(currentIndex);
+  startSlideshow();
+  }
+});
+
+
+
