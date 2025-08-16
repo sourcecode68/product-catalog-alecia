@@ -20,17 +20,19 @@ function startSlideshow() {
 }
 
 // nav click
+let started=1;
 navButtons.forEach((button) => {
   button.addEventListener("click", () => {
     clearInterval(intervalId);
     showSlide(Number(button.dataset.slide));
+    if(started==1)  
     startSlideshow();
   });
 });
 
 startSlideshow();
 // stop button
-let started=1;
+
 
 const startButton = document.querySelector(".stop");
 startButton.addEventListener("click", () => {
@@ -56,3 +58,17 @@ startButton.addEventListener("click", () => {
 
 
 
+
+  // Image click for modal with alternate image
+document.querySelectorAll('.product-grid img').forEach(img => {
+    img.addEventListener('click', function() {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        modal.style.display = 'block';
+        modalImg.src = this.dataset.large || this.src;
+    });
+});
+
+function closeModal() {
+    document.getElementById('imgModal').style.display = 'none';
+}

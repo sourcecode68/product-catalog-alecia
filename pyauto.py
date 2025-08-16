@@ -7,15 +7,27 @@ import pyautogui as pyauto
 #         print(f"{positionStr}", end='\r', flush=True)
 # except KeyboardInterrupt:
 #     print()
-coordinates=[[1577,251],[1939,251],[1577,547],[1939,547],[1577,837],[1939,837]]
-for i in range(15):
-    for j in range(len(coordinates)):
-        x, y = coordinates[j]
-        im = pyauto.screenshot(f"images/tablets/ss{i}{j}.png", region=(x, y, 362, 295))
-        pyauto.sleep(0.3)
-    pyauto.click(1484,171) 
+counter=0
+coordinates=[[279,367],[1317,367]]
+pyauto.click(362,502)
+for i in range(18):
+    for k in range(3):
+        for j in range(len(coordinates)):
+            x, y = coordinates[j]
+            im = pyauto.screenshot(f"images/ss{i}{counter}-large.png", region=(x, y, 1038, 850))
+            pyauto.sleep(0.3)
+            counter+=1
+        
+        pyauto.scroll(-5)
+        pyauto.sleep(0.5)
+    pyauto.scroll(2)
     pyauto.sleep(0.5)
+    pyauto.click(235,169)
+     
+    pyauto.sleep(0.5)
+    pyauto.click(279,367)
+    pyauto.sleep(0.2)
+    counter=0
 
 
 
-    

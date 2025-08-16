@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles2.css">
-    <link rel="icon" href="images/favicon/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="icon" href="images/favicon/favicon.png" type="image/png">
+  <style>
+    /* Floating Go to Top Button */
+    #goTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: none; /* hidden by default */
+      background-color: #af4c4c;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
+    }
+    #goTopBtn:hover {
+      background-color: #a04545;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-    <div class="page">
+<div class="page">
 
-  <div class="sidebar">
+  <div class="sidebar" id="index">
     <h2>Index</h2>
     <ul>
       <li><a href="#tablets">Tablets</a></li>
@@ -26,264 +49,172 @@
     </ul>
   </div>
 
-  <div class="content">
+<div class="content">
     <section aria-label="Our Products">
-      <div class="featured" id="tablets">
-        <a href="index.html" class="back">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </a>
-        <h2 class="section-heading"><span>Tablets</span></h2>
-      </div>
-
-      <div class="product-grid" >
-        <div class="grid-item"><img src="images/tablets/ss00.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss01.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss02.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss03.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss04.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss05.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss10.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss11.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss12.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss13.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss14.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss15.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss20.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss21.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss22.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss23.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss24.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss25.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss30.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/tablets/ss31.png" alt="Product 1"></div>
-        <!-- more items -->
-      </div>
-
-
-
-            <div class="featured" id="capsules">
-        <h2 class="section-heading"><span>Capsules</span></h2>
-      </div>
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/capsules/ss34.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss35.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss40.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss41.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss42.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss43.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss44.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss45.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss50.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/capsules/ss51.png" alt="Product 1"></div>
-
-        <!-- more items -->
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="featured" id="syrups">
-        <h2 class="section-heading"><span>Syrups</span></h2>
-      </div>
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/syrups/ss52.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss53.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss54.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss55.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss60.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss61.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss62.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss63.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss64.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss65.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss70.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss71.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss72.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss73.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss74.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/syrups/ss75.png" alt="Product 1"></div>
-
-        <!-- more items -->
-      </div>
-             <div class="featured" id="ayurvedic">
-        <h2 class="section-heading"><span>Ayurvedic Syrups</span></h2>
-      </div>
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/ayurvedic-syrup/ss120.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/ayurvedic-syrup/ss121.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/ayurvedic-syrup/ss122.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/ayurvedic-syrup/ss123.png" alt="Product 1"></div>
-        
-        <!-- more items -->
-      </div>
-
-
-
-
-              <div class="featured" id="injections">
-        <h2 class="section-heading"><span>Injections</span></h2>
-      </div>
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/injections/ss92.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss93.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss94.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss95.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss100.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss101.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss102.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss103.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/injections/ss104.png" alt="Product 1"></div> 
-        <div class="grid-item"><img src="images/injections/ss105.png" alt="Product 1"></div> 
-        <div class="grid-item"><img src="images/injections/ss110.png" alt="Product 1"></div>     
-        
-        <!-- more items -->
-      </div>
-
-
-
-
-
-
-
-        <div class="featured" id="soft">
-        <h2 class="section-heading"><span>Soft Gelatin Capsules</span></h2>
-      </div>
-
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/soft-gel/ss32.png" alt="Product 1"></div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <div class="featured" id="dry">
-        <h2 class="section-heading"><span>Dry Syrups</span></h2>
-      </div>
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/dry-syrups/ss80.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/dry-syrups/ss81.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/dry-syrups/ss82.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/dry-syrups/ss83.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/dry-syrups/ss84.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/dry-syrups/ss85.png" alt="Product 1"></div>
-        <!-- more items -->
-      </div>
-
-
-
-             <div class="featured" id="protein">
-        <h2 class="section-heading"><span>Protein Powder</span></h2>
-      </div>
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/protein-powder/ss90.png" alt="Product 1"></div>
-
-        </div>
-
-
-
-             <div class="featured" id="energy">
-        <h2 class="section-heading"><span>Energy Drink</span></h2>
-      </div>
-      <div class="product-grid">
-        <div class="grid-item"><img src="images/energy-drink/ss124.png" alt="Product 1"></div>
-
-        </div>
-        
-
-
-
-
-
-
-
-
-
-
-
-        <div class="featured" id="oral">
-        <h2 class="section-heading"><span>Drops</span></h2>
-      </div>
-      <div class="product-grid">
-          <div class="grid-item"><img src="images/oral-nasal/ss112.png" alt="Product 1"></div>
-          <div class="grid-item"><img src="images/oral-nasal/ss113.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/oral-nasal/ss114.png" alt="Product 1"></div>
-        <div class="grid-item"><img src="images/oral-nasal/ss115.png" alt="Product 1"></div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </section>
+  <div class="featured" id="tablets">
+    <a href="index.html" class="back">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </a>
+    <h2 class="section-heading"><span>Tablets</span></h2>
   </div>
 
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/tablets/ss00.png" data-large="images/large/ss00-large.png" alt="Product 1"></div>
+    <div class="grid-item"><img src="images/tablets/ss01.png" data-large="images/large/ss01-large.png" alt="Product 2"></div>
+    <div class="grid-item"><img src="images/tablets/ss02.png" data-large="images/large/ss02-large.png" alt="Product 3"></div>
+    <div class="grid-item"><img src="images/tablets/ss03.png" data-large="images/large/ss03-large.png" alt="Product 4"></div>
+    <div class="grid-item"><img src="images/tablets/ss04.png" data-large="images/large/ss04-large.png" alt="Product 5"></div>
+    <div class="grid-item"><img src="images/tablets/ss05.png" data-large="images/large/ss05-large.png" alt="Product 6"></div>
+    <div class="grid-item"><img src="images/tablets/ss10.png" data-large="images/large/ss10-large.png" alt="Product 7"></div>
+    <div class="grid-item"><img src="images/tablets/ss11.png" data-large="images/large/ss11-large.png" alt="Product 8"></div>
+    <div class="grid-item"><img src="images/tablets/ss12.png" data-large="images/large/ss12-large.png" alt="Product 9"></div>
+    <div class="grid-item"><img src="images/tablets/ss13.png" data-large="images/large/ss13-large.png" alt="Product 10"></div>
+    <div class="grid-item"><img src="images/tablets/ss14.png" data-large="images/large/ss14-large.png" alt="Product 11"></div>
+    <div class="grid-item"><img src="images/tablets/ss15.png" data-large="images/large/ss15-large.png" alt="Product 12"></div>
+    <div class="grid-item"><img src="images/tablets/ss20.png" data-large="images/large/ss20-large.png" alt="Product 13"></div>
+    <div class="grid-item"><img src="images/tablets/ss21.png" data-large="images/large/ss21-large.png" alt="Product 14"></div>
+    <div class="grid-item"><img src="images/tablets/ss22.png" data-large="images/large/ss22-large.png" alt="Product 15"></div>
+    <div class="grid-item"><img src="images/tablets/ss23.png" data-large="images/large/ss23-large.png" alt="Product 16"></div>
+    <div class="grid-item"><img src="images/tablets/ss24.png" data-large="images/large/ss24-large.png" alt="Product 17"></div>
+    <div class="grid-item"><img src="images/tablets/ss25.png" data-large="images/large/ss25-large.png" alt="Product 18"></div>
+    <div class="grid-item"><img src="images/tablets/ss30.png" data-large="images/large/ss30-large.png" alt="Product 19"></div>
+    <div class="grid-item"><img src="images/tablets/ss31.png" data-large="images/large/ss31-large.png" alt="Product 20"></div>
+  </div>
+
+  <div class="featured" id="capsules">
+    <h2 class="section-heading"><span>Capsules</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/capsules/ss34.png" data-large="images/large/ss34-large.png" alt="Product 1"></div>
+    <div class="grid-item"><img src="images/capsules/ss35.png" data-large="images/large/ss35-large.png" alt="Product 2"></div>
+    <div class="grid-item"><img src="images/capsules/ss40.png" data-large="images/large/ss40-large.png" alt="Product 3"></div>
+    <div class="grid-item"><img src="images/capsules/ss41.png" data-large="images/large/ss41-large.png" alt="Product 4"></div>
+    <div class="grid-item"><img src="images/capsules/ss42.png" data-large="images/large/ss42-large.png" alt="Product 5"></div>
+    <div class="grid-item"><img src="images/capsules/ss43.png" data-large="images/large/ss43-large.png" alt="Product 6"></div>
+    <div class="grid-item"><img src="images/capsules/ss44.png" data-large="images/large/ss44-large.png" alt="Product 7"></div>
+    <div class="grid-item"><img src="images/capsules/ss45.png" data-large="images/large/ss45-large.png" alt="Product 8"></div>
+    <div class="grid-item"><img src="images/capsules/ss50.png" data-large="images/large/ss50-large.png" alt="Product 9"></div>
+    <div class="grid-item"><img src="images/capsules/ss51.png" data-large="images/large/ss51-large.png" alt="Product 10"></div>
+  </div>
+
+  <div class="featured" id="syrups">
+    <h2 class="section-heading"><span>Syrups</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/syrups/ss52.png" data-large="images/large/ss52-large.png" alt="Product 1"></div>
+    <div class="grid-item"><img src="images/syrups/ss53.png" data-large="images/large/ss53-large.png" alt="Product 2"></div>
+    <div class="grid-item"><img src="images/syrups/ss54.png" data-large="images/large/ss54-large.png" alt="Product 3"></div>
+    <div class="grid-item"><img src="images/syrups/ss55.png" data-large="images/large/ss55-large.png" alt="Product 4"></div>
+    <div class="grid-item"><img src="images/syrups/ss60.png" data-large="images/large/ss60-large.png" alt="Product 5"></div>
+    <div class="grid-item"><img src="images/syrups/ss61.png" data-large="images/large/ss61-large.png" alt="Product 6"></div>
+    <div class="grid-item"><img src="images/syrups/ss62.png" data-large="images/large/ss62-large.png" alt="Product 7"></div>
+    <div class="grid-item"><img src="images/syrups/ss63.png" data-large="images/large/ss63-large.png" alt="Product 8"></div>
+    <div class="grid-item"><img src="images/syrups/ss64.png" data-large="images/large/ss64-large.png" alt="Product 9"></div>
+    <div class="grid-item"><img src="images/syrups/ss65.png" data-large="images/large/ss65-large.png" alt="Product 10"></div>
+    <div class="grid-item"><img src="images/syrups/ss70.png" data-large="images/large/ss70-large.png" alt="Product 11"></div>
+    <div class="grid-item"><img src="images/syrups/ss71.png" data-large="images/large/ss71-large.png" alt="Product 12"></div>
+    <div class="grid-item"><img src="images/syrups/ss72.png" data-large="images/large/ss72-large.png" alt="Product 13"></div>
+    <div class="grid-item"><img src="images/syrups/ss73.png" data-large="images/large/ss73-large.png" alt="Product 14"></div>
+    <div class="grid-item"><img src="images/syrups/ss74.png" data-large="images/large/ss74-large.png" alt="Product 15"></div>
+    <div class="grid-item"><img src="images/syrups/ss75.png" data-large="images/large/ss75-large.png" alt="Product 16"></div>
+  </div>
+
+  <div class="featured" id="ayurvedic">
+    <h2 class="section-heading"><span>Ayurvedic Syrups</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/ayurvedic-syrup/ss120.png" data-large="images/large/ss120-large.png" alt="Product 1"></div>
+    <div class="grid-item"><img src="images/ayurvedic-syrup/ss121.png" data-large="images/large/ss121-large.png" alt="Product 2"></div>
+    <div class="grid-item"><img src="images/ayurvedic-syrup/ss122.png" data-large="images/large/ss122-large.png" alt="Product 3"></div>
+    <div class="grid-item"><img src="images/ayurvedic-syrup/ss123.png" data-large="images/large/ss123-large.png" alt="Product 4"></div>
+  </div>
+
+  <div class="featured" id="injections">
+    <h2 class="section-heading"><span>Injections</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/injections/ss92.png" data-large="images/large/ss92-large.png" alt="Product 1"></div>
+    <div class="grid-item"><img src="images/injections/ss93.png" data-large="images/large/ss93-large.png" alt="Product 2"></div>
+    <div class="grid-item"><img src="images/injections/ss94.png" data-large="images/large/ss94-large.png" alt="Product 3"></div>
+    <div class="grid-item"><img src="images/injections/ss95.png" data-large="images/large/ss95-large.png" alt="Product 4"></div>
+    <div class="grid-item"><img src="images/injections/ss100.png" data-large="images/large/ss100-large.png" alt="Product 5"></div>
+    <div class="grid-item"><img src="images/injections/ss101.png" data-large="images/large/ss101-large.png" alt="Product 6"></div>
+    <div class="grid-item"><img src="images/injections/ss102.png" data-large="images/large/ss102-large.png" alt="Product 7"></div>
+    <div class="grid-item"><img src="images/injections/ss103.png" data-large="images/large/ss103-large.png" alt="Product 8"></div>
+    <div class="grid-item"><img src="images/injections/ss104.png" data-large="images/large/ss104-large.png" alt="Product 9"></div>
+    <div class="grid-item"><img src="images/injections/ss105.png" data-large="images/large/ss105-large.png" alt="Product 10"></div>
+    <div class="grid-item"><img src="images/injections/ss110.png" data-large="images/large/ss110-large.png" alt="Product 11"></div>
+  </div>
+
+  <div class="featured" id="soft">
+    <h2 class="section-heading"><span>Soft Gelatin Capsules</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/soft-gel/ss32.png" data-large="images/large/ss32-large.png" alt="Product 1"></div>
+  </div>
+
+  <div class="featured" id="dry">
+    <h2 class="section-heading"><span>Dry Syrups</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/dry-syrups/ss80.png" data-large="images/large/ss80-large.png" alt="Product 1"></div>
+    <div class="grid-item"><img src="images/dry-syrups/ss81.png" data-large="images/large/ss81-large.png" alt="Product 2"></div>
+    <div class="grid-item"><img src="images/dry-syrups/ss82.png" data-large="images/large/ss82-large.png" alt="Product 3"></div>
+    <div class="grid-item"><img src="images/dry-syrups/ss83.png" data-large="images/large/ss83-large.png" alt="Product 4"></div>
+    <div class="grid-item"><img src="images/dry-syrups/ss84.png" data-large="images/large/ss84-large.png" alt="Product 5"></div>
+    <div class="grid-item"><img src="images/dry-syrups/ss85.png" data-large="images/large/ss85-large.png" alt="Product 6"></div>
+  </div>
+
+  <div class="featured" id="protein">
+    <h2 class="section-heading"><span>Protein Powder</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/protein-powder/ss90.png" data-large="images/large/ss90-large.png" alt="Product 1"></div>
+  </div>
+
+  <div class="featured" id="energy">
+    <h2 class="section-heading"><span>Energy Drink</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/energy-drink/ss124.png" data-large="images/large/ss124-large.png" alt="Product 1"></div>
+  </div>
+
+  <div class="featured" id="oral">
+    <h2 class="section-heading"><span>Drops</span></h2>
+  </div>
+  <div class="product-grid">
+    <div class="grid-item"><img src="images/oral-nasal/ss112.png" data-large="images/large/ss112-large.png" alt="Product 1"></div>
+    <div class="grid-item"><img src="images/oral-nasal/ss113.png" data-large="images/large/ss113-large.png" alt="Product 2"></div>
+    <div class="grid-item"><img src="images/oral-nasal/ss114.png" data-large="images/large/ss114-large.png" alt="Product 3"></div>
+    <div class="grid-item"><img src="images/oral-nasal/ss115.png" data-large="images/large/ss115-large.png" alt="Product 4"></div>
+  </div>
+</section>
+
+  </div>
+
+<!-- Modal for enlarged image -->
+<div id="imgModal">
+  <span onclick="closeModal()">&times;</span>
+  <img id="modalImg" src="">
 </div>
 
-    
+<!-- Go to Top Button -->
+<button id="goTopBtn" title="Go to Index">↑</button>
 
-   
-</body>
 <script>
 function updateBackButton() {
     let backButton = document.querySelector('.back');
 
     if (window.innerWidth < 500) {
-        backButton.innerHTML = 'Home'; // text only
-
-     backButton.style.fontSize ='20px';
+        backButton.innerHTML = 'Home';
+        backButton.style.fontSize ='20px';
         backButton.style.padding = '10px 10px';
-        backButton.style.backgroundColor = '#4CAF50'; // green background
-        backButton.style.color = '#fff'; // white text
-        backButton.style.borderRadius = '5px'; // rounded corners
-        backButton.style.textDecoration = 'none'; // 
-    
-     
-
+        backButton.style.backgroundColor = '#4CAF50';
+        backButton.style.color = '#fff';
+        backButton.style.borderRadius = '5px';
+        backButton.style.textDecoration = 'none';
     } else {
         backButton.innerHTML = `
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -296,5 +227,34 @@ function updateBackButton() {
 window.addEventListener('resize', updateBackButton);
 window.addEventListener('load', updateBackButton);
 
+// Image click for modal with alternate image
+document.querySelectorAll('.product-grid img').forEach(img => {
+    img.addEventListener('click', function() {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        modal.style.display = 'block';
+        modalImg.src = this.dataset.large || this.src;
+    });
+});
+
+function closeModal() {
+    document.getElementById('imgModal').style.display = 'none';
+}
+
+// Show/Hide Go to Top button when scrolling
+const goTopBtn = document.getElementById("goTopBtn");
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    goTopBtn.style.display = "block";
+  } else {
+    goTopBtn.style.display = "none";
+  }
+});
+
+// Scroll to Index when clicked
+goTopBtn.addEventListener("click", () => {
+  document.getElementById("index").scrollIntoView({ behavior: "smooth" });
+});
 </script>
+</body>
 </html>
