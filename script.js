@@ -16,7 +16,7 @@ function startSlideshow() {
   intervalId = setInterval(() => {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
-  }, 3000);
+  }, 4000);
 }
 
 // nav click
@@ -39,6 +39,8 @@ startButton.addEventListener("click", () => {
     started=0;
     clearInterval(intervalId);
     showSlide(currentIndex);
+    startButton.textContent = "Play";
+    startButton.style.backgroundColor = "green";
 
   }
   else if(started==0)
@@ -47,6 +49,8 @@ startButton.addEventListener("click", () => {
   currentIndex=(currentIndex+1)% slides.length;
   showSlide(currentIndex);
   startSlideshow();
+  startButton.textContent = "Pause";
+  startButton.style.backgroundColor = "red";
   }
 });
 

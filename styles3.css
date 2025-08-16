@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    
+}
+
+html body {
+    position: relative;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(61, 61, 59));
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* ensures at least full height, but grows with content */
+    margin: 0; /* removes browser default margin */
+    color: rgb(227, 223, 223);
+    overflow: hidden;
+    
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* full viewport height */
+    overflow-y: hidden;
+}
+
+.back {
+
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    opacity: 0.8;
+    text-decoration: none;
+    color: rgb(227, 223, 223);
+    font-size: xx-large;
+}
+
+.back:hover {
+    opacity: 1;
+}
+
+
+
