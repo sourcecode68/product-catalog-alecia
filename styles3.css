@@ -2,7 +2,19 @@
     box-sizing: border-box;
     margin:0;
     padding: 0;
-    
+    font-size:1.5rem;
+  
+}
+hr {
+
+    border: 0;
+    height: 1.5px;             /* thickness of line */
+    background-color: #646363;  /* light gray color */
+    margin-bottom: 8px;
+}
+
+.btm {
+    font-size: x-large;
 }
 
 html body {
@@ -12,17 +24,11 @@ html body {
     min-height: 100vh; /* ensures at least full height, but grows with content */
     margin: 0; /* removes browser default margin */
     color: rgb(227, 223, 223);
-    overflow: hidden;
+    overflow-x: hidden;
     
 }
 
-.main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* full viewport height */
-    overflow-y: hidden;
-}
+
 
 .back {
 
@@ -40,4 +46,134 @@ html body {
 }
 
 
+
+.featured {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centers horizontally */
+  margin-top: 20px;
+  
+}
+
+.contact {
+ 
+  display: grid;
+  grid-template-columns: max-content 20px max-content; /* auto-fit content */
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 1.8rem;
+  white-space: nowrap; /* keeps name+designation in one line */
+}
+
+.label {
+    width: 500px; /* fixed width for labels */
+  text-align: left;
+}
+
+
+.colon {
+    width: 10px;
+  text-align: right;
+}
+
+.number {
+  width: 368px;
+  text-align: left;
+  white-space: normal; /* allow wrapping only for numbers */
+}
+
+
+
+.number a {
+  color: rgb(227, 223, 223); /* same as text color */
+  text-decoration: none;     /* remove underline */
+}
+
+.number a:hover {
+  text-decoration: underline; /* optional: show underline only on hover */
+}
+@media (max-width: 900px) {
+
+  .contact {
+ 
+    
+  display: grid;
+  grid-template-columns: max-content 0 max-content; /* auto-fit content */
+ 
+  margin: 20px 0;
+ 
+  white-space: nowrap; /* keeps name+designation in one line */
+
+  margin-left: 10px;
+}
+
+  
+  * {
+    font-size: 16px; /* smaller font size for small screens */
+  }
+
+
+
+
+
+
+.label {
+    width: 200px; /* fixed width for labels */
+  
+}
+
+
+.colon {
+    width: 3px;
+  text-align: right;
+}
+
+.number {
+  width: 113px;
+  text-align: left;
+  white-space: normal; /* allow wrapping only for numbers */
+}
+
+
+
+
+.back {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    text-decoration: none;
+    color: rgb(227, 223, 223);
+   
+    
+}
+
+.btm{
+    display: none;
+}
+
+.value{
+  font-size: 13px;
+   overflow-wrap: anywhere;
+}
+
+/* .mobile{
+  position: relative;
+  left: -100px;
+} */
+
+
+}
 

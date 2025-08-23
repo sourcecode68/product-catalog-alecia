@@ -56,11 +56,56 @@ startButton.addEventListener("click", () => {
   }
 });
 
+const prevButton=document.querySelector(".prev");
+
+const nextButton=document.querySelector(".next");
+
+prevButton.addEventListener("click", () => {
+  if(currentIndex==0)
+  {
+    currentIndex=slides.length-1;
+    showSlide(currentIndex);
+  }
+  else{
+
+    currentIndex=(currentIndex-1)% slides.length;
+    showSlide(currentIndex);
+  }
+  
+  });
+
+
+
+nextButton.addEventListener("click", () => {
+    currentIndex=(currentIndex+1)% slides.length;
+    showSlide(currentIndex);
+  
+  
+  });
+
+
+
+
+
+
+
+
+
+
 
 
 
   // Image click for modal with alternate image
 document.querySelectorAll('.product-grid img').forEach(img => {
+    img.addEventListener('click', function() {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        modal.style.display = 'block';
+        modalImg.src = this.dataset.large || this.src;
+    });
+});
+
+document.querySelectorAll('.slide img').forEach(img => {
     img.addEventListener('click', function() {
         const modal = document.getElementById('imgModal');
         const modalImg = document.getElementById('modalImg');
