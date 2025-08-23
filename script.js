@@ -105,14 +105,7 @@ document.querySelectorAll('.product-grid img').forEach(img => {
     });
 });
 
-document.querySelectorAll('.slide img').forEach(img => {
-    img.addEventListener('click', function() {
-        const modal = document.getElementById('imgModal');
-        const modalImg = document.getElementById('modalImg');
-        modal.style.display = 'block';
-        modalImg.src = this.dataset.large || this.src;
-    });
-});
+
 
 function closeModal() {
     document.getElementById('imgModal').style.display = 'none';
