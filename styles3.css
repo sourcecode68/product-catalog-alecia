@@ -167,6 +167,10 @@ html body {
 .value{
   font-size: 13px;
    overflow-wrap: anywhere;
+   display: inline-block;
+   line-height: 1;
+  
+   
 }
 
 /* .mobile{
