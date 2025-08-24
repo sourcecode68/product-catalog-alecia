@@ -54,7 +54,7 @@ img:hover {
 
 html body {
     position: relative;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(29, 29, 29));
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(29, 29, 29)) !important;
     font-family: Arial, sans-serif;
     min-height: 100vh;
     margin: 0;

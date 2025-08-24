@@ -103,7 +103,12 @@ html body {
 .number a:hover {
   text-decoration: underline; /* optional: show underline only on hover */
 }
+
+.bank{
+  margin-bottom: 4px;
+}
 @media (max-width: 900px) {
+
 
   .contact {
  
@@ -140,7 +145,7 @@ html body {
 }
 
 .number {
-  width: 113px;
+  width: 114px;
   text-align: left;
   white-space: normal; /* allow wrapping only for numbers */
 }
@@ -177,6 +182,9 @@ html body {
   position: relative;
   left: -100px;
 } */
+  .bank{
+    margin-bottom: 0px;
+  }
 
 
 }
