@@ -88,7 +88,7 @@ html body {
 }
 
 .number {
-  width: 368px;
+  width: 450px;
   text-align: left;
   white-space: normal; /* allow wrapping only for numbers */
 }
