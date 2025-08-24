@@ -96,7 +96,7 @@ nextButton.addEventListener("click", () => {
 
 
   // Image click for modal with alternate image
-document.querySelectorAll('.product-grid img').forEach(img => {
+document.querySelectorAll('img').forEach(img => {
     img.addEventListener('click', function() {
         const modal = document.getElementById('imgModal');
         const modalImg = document.getElementById('modalImg');
