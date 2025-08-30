@@ -343,8 +343,14 @@ html body {
 }
 
 .click{
+  position: absolute;
   
-  animation: flash 2s infinite;
+  opacity: 1;
+  font-size: 50px;
+  left :5px;
+  top: 15px;
+  
+  /* animation: flash 2s infinite; */
 }
 
 @keyframes flash {
@@ -359,11 +365,16 @@ html body {
 
 
 @media (max-width: 1400px) {
+  .click
+  {
+    font-size: x-large;
+  }
+  
 
 
   .click{
     position: absolute;
-
+    
   left: 10px;
 }
 
@@ -394,7 +405,7 @@ html body {
 
   .click{
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 40px;
     
 
